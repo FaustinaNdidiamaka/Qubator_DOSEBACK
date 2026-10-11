@@ -1,0 +1,21 @@
+# Netlify config for DoseBack PWA (static Vite build).
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# SPA fallback: serve index.html for any route (harmless single-page app safety net).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# PWA-friendly caching: immutable hashed assets long-cache, shell revalidated.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
