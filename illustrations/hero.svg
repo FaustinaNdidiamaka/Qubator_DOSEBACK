@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" role="img" aria-label="Illustration of a community health worker with mother and child">
+  <rect width="600" height="220" rx="20" fill="#DFF3E8"/>
+  <circle cx="80" cy="50" r="30" fill="#E97861" opacity="0.25"/>
+  <circle cx="540" cy="180" r="44" fill="#126B68" opacity="0.12"/>
+  <rect x="36" y="60" width="120" height="80" rx="10" fill="#FFFFFF" stroke="#126B68" stroke-width="4"/>
+  <rect x="36" y="60" width="120" height="22" rx="10" fill="#126B68"/>
+  <rect x="82" y="96" width="28" height="44" rx="5" fill="#126B68" opacity="0.8"/>
+  <ellipse cx="300" cy="196" rx="220" ry="14" fill="#126B68" opacity="0.12"/>
+  <g>
+    <rect x="330" y="92" width="72" height="88" rx="22" fill="#126B68"/>
+    <circle cx="366" cy="72" r="22" fill="#8B5E3C"/>
+    <path d="M344 68c0-20 44-20 44 5l-5 3c-1-14-32-14-33 0z" fill="#0E4F4D"/>
+    <rect x="356" y="106" width="20" height="16" rx="4" fill="#fff"/>
+    <rect x="363" y="101" width="6" height="26" rx="2" fill="#E97861"/>
+    <rect x="354" y="109" width="24" height="6" rx="2" fill="#E97861"/>
+  </g>
+  <g>
+    <rect x="412" y="98" width="76" height="88" rx="24" fill="#E97861"/>
+    <circle cx="450" cy="78" r="22" fill="#6B4226"/>
+    <path d="M428 74c0-22 44-22 44 3l-8 2c2-16-30-17-32-3z" fill="#B54632"/>
+  </g>
+  <g>
+    <circle cx="516" cy="128" r="16" fill="#8B5E3C"/>
+    <rect x="500" y="146" width="32" height="42" rx="12" fill="#126B68"/>
+  </g>
+  <g>
+    <circle cx="220" cy="110" r="26" fill="#FFFFFF" stroke="#126B68" stroke-width="4"/>
+    <path d="M228 84l28-14 6 6-28 14z" fill="#126B68"/>
+    <rect x="196" y="104" width="66" height="12" rx="6" fill="#126B68"/>
+    <rect x="196" y="122" width="48" height="10" rx="5" fill="#126B68" opacity="0.4"/>
+  </g>
+</svg>

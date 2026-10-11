@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" role="img" aria-label="DoseBack wordmark">
+  <g transform="translate(4,4)">
+    <path d="M28 53C12 41 4 29 7.5 20c2.3-5.7 8.9-8.3 13.9-5.3 2.5 1.7 4.4 4.7 6.6 8 2.2-3.3 4.1-6.3 6.6-8 5-3 11.6-.4 13.9 5.3C52 29 44 41 28 53z" fill="#126B68"/>
+    <circle cx="21.5" cy="27" r="4.6" fill="#FFFFFF"/>
+    <path d="M14.9 40.5c0-4.8 3-7.6 6.6-7.6s6.6 2.8 6.6 7.6l-2.3 1.6h-8.6l-2.3-1.6z" fill="#FFFFFF"/>
+    <circle cx="33.5" cy="30" r="3.4" fill="#DFF3E8"/>
+    <path d="M28.7 41.2c.4-3.6 2.3-5.7 4.8-5.7s4.4 2.1 4.8 5.7l-1.7 1.2h-6.2l-1.7-1.2z" fill="#DFF3E8"/>
+    <circle cx="42" cy="12.5" r="8" fill="#E97861"/>
+    <rect x="39.7" y="8" width="4.6" height="9" rx="1" fill="#FFFFFF"/>
+    <rect x="37.5" y="10.2" width="9" height="4.6" rx="1" fill="#FFFFFF"/>
+  </g>
+  <text x="62" y="34" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="26" font-weight="800" fill="#126B68" letter-spacing="-0.5">DoseBack</text>
+  <text x="62" y="52" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="10.5" font-weight="600" fill="#263B3A">Every child deserves a follow-up.</text>
+</svg>
