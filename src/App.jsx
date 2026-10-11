@@ -32,9 +32,54 @@ function enrich(children, appointments, followUps) {
     })
 }
 
+function SafeImg({ src, alt, className, style }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return <div className="img-fallback" role="img" aria-label={alt}>DoseBack • Every child deserves a follow-up.</div>
+  return <img src={src} alt={alt} className={className} style={style} loading="lazy" onError={() => setFailed(true)} />
+}
+
+function Welcome({ onEnter }) {
+  return (
+    <div className="page">
+      <div className="card welcome">
+        <div className="welcome-visual">
+          <SafeImg src="/illustrations/welcome.svg" alt="Nigerian community health worker welcoming a mother and young child at a primary healthcare centre" />
+        </div>
+        <div className="welcome-copy">
+          <div className="brandmark">
+            <SafeImg src="/logo.svg" alt="DoseBack logo" />
+          </div>
+          <p className="tagline">Every child deserves a follow-up.</p>
+          <h2>Welcome to DoseBack</h2>
+          <p className="muted">A calm, simple workspace for community health workers and immunisation focal persons to track upcoming and overdue appointments — and document each follow-up. This demo uses fictional records only.</p>
+          <div className="panel-mint" style={{ marginTop: 10 }}>
+            <strong>What you can do:</strong>
+            <div className="muted">See who is due today • find overdue cases • record each contact • keep outstanding cases visible.</div>
+          </div>
+          <div style={{ height: 12 }} />
+          <button className="btn coral" onClick={onEnter} style={{ width: '100%' }}>Enter demo app</button>
+          <p className="muted" style={{ fontSize: 12 }}>No login needed. Nothing leaves this device in the prototype.</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function HeroBanner() {
+  return (
+    <div className="hero">
+      <div style={{ flex: 1 }}>
+        <h2>Every child counts.</h2>
+        <p>Stay on track with immunisation follow-ups.</p>
+      </div>
+      <SafeImg src="/illustrations/hero.svg" alt="Community health worker with mother and child" />
+    </div>
+  )
+}
+
 export default function App() {
   const [tick, setTick] = useState(0)
-  const [view, setView] = useState({ name: 'dashboard', filter: 'all' })
+  const [view, setView] = useState({ name: 'welcome' })
   const [search, setSearch] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
 
@@ -69,15 +114,25 @@ export default function App() {
       <div className="banner" role="note">
         Prototype — fictional records only. Not a medical system. No real patient data.
       </div>
+      <div className="brandbar">
+        <img className="logo" src="/logo-icon.svg" alt="DoseBack logo icon" width="40" height="40" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+        <div className="bt"><strong>DoseBack</strong><span>Every child deserves a follow-up.</span></div>
+      </div>
       <div className="header">
         <h1>DoseBack</h1>
         <p>Every child deserves a follow-up. Saved on this device • Demo - not shared.</p>
       </div>
+      {view.name !== 'welcome' && (
       <nav className="nav" aria-label="Main">
         <button className={view.name === 'dashboard' ? 'active' : ''} onClick={() => setView({ name: 'dashboard', filter: 'all' })}>Dashboard</button>
         <button className={view.name === 'children' ? 'active' : ''} onClick={() => setView({ name: 'children' })}>Children</button>
         <button className={view.name === 'register' ? 'active' : ''} onClick={() => setView({ name: 'register' })}>Register</button>
       </nav>
+      )}
+
+      {view.name === 'welcome' && (
+        <Welcome onEnter={() => setView({ name: 'dashboard', filter: 'all' })} />
+      )}
 
       {view.name === 'dashboard' && (
         <Dashboard counts={counts} rows={data.rows} filter={view.filter} setView={setView} openDetail={openDetail} refresh={refresh} />
@@ -104,6 +159,7 @@ function Dashboard({ counts, rows, filter, setView, openDetail, refresh }) {
 
   return (
     <div className="page">
+      <HeroBanner />
       <div className="stats">
         <button className={`stat ${f === 'upcoming' ? 'sel' : ''}`} onClick={() => setView({ name: 'dashboard', filter: 'upcoming' })}><div className="n">{counts.upcoming}</div><div className="l">Upcoming</div></button>
         <button className={`stat ${f === 'due-today' ? 'sel' : ''}`} onClick={() => setView({ name: 'dashboard', filter: 'due-today' })}><div className="n">{counts['due-today']}</div><div className="l">Due today</div></button>
