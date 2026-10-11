@@ -43,11 +43,11 @@ function Welcome({ onEnter }) {
     <div className="page">
       <div className="card welcome">
         <div className="welcome-visual">
-          <SafeImg src="/illustrations/welcome.svg" alt="Nigerian community health worker welcoming a mother and young child at a primary healthcare centre" />
+          <SafeImg src="illustrations/welcome.svg" alt="Nigerian community health worker welcoming a mother and young child at a primary healthcare centre" />
         </div>
         <div className="welcome-copy">
           <div className="brandmark">
-            <SafeImg src="/logo.svg" alt="DoseBack logo" />
+            <SafeImg src="logo.svg" alt="DoseBack logo" />
           </div>
           <p className="tagline">Every child deserves a follow-up.</p>
           <h2>Welcome to DoseBack</h2>
@@ -72,7 +72,7 @@ function HeroBanner() {
         <h2>Every child counts.</h2>
         <p>Stay on track with immunisation follow-ups.</p>
       </div>
-      <SafeImg src="/illustrations/hero.svg" alt="Community health worker with mother and child" />
+      <SafeImg src="illustrations/hero.svg" alt="Community health worker with mother and child" />
     </div>
   )
 }
@@ -115,7 +115,7 @@ export default function App() {
         Prototype — fictional records only. Not a medical system. No real patient data.
       </div>
       <div className="brandbar">
-        <img className="logo" src="/logo-icon.svg" alt="DoseBack logo icon" width="40" height="40" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+        <img className="logo" src="logo-icon.svg" alt="DoseBack logo icon" width="40" height="40" onError={(e) => { e.currentTarget.style.display = 'none' }} />
         <div className="bt"><strong>DoseBack</strong><span>Every child deserves a follow-up.</span></div>
       </div>
       <div className="header">
